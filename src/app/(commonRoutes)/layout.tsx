@@ -1,10 +1,16 @@
-import { Navbar1 } from '@/components/layout/navbar1';
+import { Navbar } from '@/components/layout/navbar1';
 import React, { ReactNode } from 'react';
-
-const CommonLayout = ({ children }: { children: ReactNode }) => {
+type UserType = {
+    name: string;
+    email: string;
+    role: "STUDENT" | "TUTOR" | "ADMIN";
+    image?: string;
+};
+const CommonLayout = async ({ children }: { children: ReactNode }) => {
+ 
     return (
         <div>
-            <Navbar1 />
+            <Navbar />
             {children}
         </div>
     );
